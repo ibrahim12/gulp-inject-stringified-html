@@ -69,8 +69,8 @@ function doInjectHtml(contents, vinyl, params) {
     htmlFilePath = path.normalize(htmlFilePath);
 
     htmlContent = read(htmlFilePath);
-    htmlContent = htmlJsStr(htmlContent);
-    htmlContent = ['"', htmlContent, '"'].join('');
+//     htmlContent = htmlJsStr(htmlContent);
+    htmlContent = [''', htmlContent, '''].join('');
 
     contents = contents.replace(o.replacee, htmlContent);
   });
